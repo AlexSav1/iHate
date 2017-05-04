@@ -7,10 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		006B7E851EBBCDF6004BC39C /* GameListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 006B7E7E1EBBCDF6004BC39C /* GameListViewController.m */; };
+		006B7E861EBBCDF6004BC39C /* WAMCustomizeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 006B7E801EBBCDF6004BC39C /* WAMCustomizeViewController.m */; };
+		006B7E871EBBCDF6004BC39C /* WAMGameViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 006B7E821EBBCDF6004BC39C /* WAMGameViewController.m */; };
+		006B7E881EBBCDF6004BC39C /* WAMScoreBoardViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 006B7E841EBBCDF6004BC39C /* WAMScoreBoardViewController.m */; };
 		EBC94501613CA88E22475E7B /* libPods-iHate.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6141079E682E2EE2B7DE6460 /* libPods-iHate.a */; };
 		FA4DD77A1EBBC87300CB48FE /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = FA4DD7791EBBC87300CB48FE /* main.m */; };
 		FA4DD77D1EBBC87300CB48FE /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = FA4DD77C1EBBC87300CB48FE /* AppDelegate.m */; };
-		FA4DD7801EBBC87300CB48FE /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FA4DD77F1EBBC87300CB48FE /* ViewController.m */; };
 		FA4DD7831EBBC87300CB48FE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA4DD7811EBBC87300CB48FE /* Main.storyboard */; };
 		FA4DD7851EBBC87300CB48FE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FA4DD7841EBBC87300CB48FE /* Assets.xcassets */; };
 		FA4DD7881EBBC87300CB48FE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA4DD7861EBBC87300CB48FE /* LaunchScreen.storyboard */; };
@@ -18,6 +21,14 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		006B7E7D1EBBCDF6004BC39C /* GameListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameListViewController.h; sourceTree = "<group>"; };
+		006B7E7E1EBBCDF6004BC39C /* GameListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameListViewController.m; sourceTree = "<group>"; };
+		006B7E7F1EBBCDF6004BC39C /* WAMCustomizeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WAMCustomizeViewController.h; sourceTree = "<group>"; };
+		006B7E801EBBCDF6004BC39C /* WAMCustomizeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WAMCustomizeViewController.m; sourceTree = "<group>"; };
+		006B7E811EBBCDF6004BC39C /* WAMGameViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WAMGameViewController.h; sourceTree = "<group>"; };
+		006B7E821EBBCDF6004BC39C /* WAMGameViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WAMGameViewController.m; sourceTree = "<group>"; };
+		006B7E831EBBCDF6004BC39C /* WAMScoreBoardViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WAMScoreBoardViewController.h; sourceTree = "<group>"; };
+		006B7E841EBBCDF6004BC39C /* WAMScoreBoardViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WAMScoreBoardViewController.m; sourceTree = "<group>"; };
 		4321CA90FD9D1FDC7144BAD3 /* Pods-iHate.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iHate.release.xcconfig"; path = "Pods/Target Support Files/Pods-iHate/Pods-iHate.release.xcconfig"; sourceTree = "<group>"; };
 		6141079E682E2EE2B7DE6460 /* libPods-iHate.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-iHate.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		636053C1F7D76BFDD05434C5 /* Pods-iHate.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iHate.debug.xcconfig"; path = "Pods/Target Support Files/Pods-iHate/Pods-iHate.debug.xcconfig"; sourceTree = "<group>"; };
@@ -25,8 +36,6 @@
 		FA4DD7791EBBC87300CB48FE /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		FA4DD77B1EBBC87300CB48FE /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		FA4DD77C1EBBC87300CB48FE /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		FA4DD77E1EBBC87300CB48FE /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		FA4DD77F1EBBC87300CB48FE /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		FA4DD7821EBBC87300CB48FE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		FA4DD7841EBBC87300CB48FE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FA4DD7871EBBC87300CB48FE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -86,9 +95,15 @@
 			children = (
 				FA4DD77B1EBBC87300CB48FE /* AppDelegate.h */,
 				FA4DD77C1EBBC87300CB48FE /* AppDelegate.m */,
-				FA4DD77E1EBBC87300CB48FE /* ViewController.h */,
-				FA4DD77F1EBBC87300CB48FE /* ViewController.m */,
 				FA4DD7811EBBC87300CB48FE /* Main.storyboard */,
+				006B7E7D1EBBCDF6004BC39C /* GameListViewController.h */,
+				006B7E7E1EBBCDF6004BC39C /* GameListViewController.m */,
+				006B7E7F1EBBCDF6004BC39C /* WAMCustomizeViewController.h */,
+				006B7E801EBBCDF6004BC39C /* WAMCustomizeViewController.m */,
+				006B7E811EBBCDF6004BC39C /* WAMGameViewController.h */,
+				006B7E821EBBCDF6004BC39C /* WAMGameViewController.m */,
+				006B7E831EBBCDF6004BC39C /* WAMScoreBoardViewController.h */,
+				006B7E841EBBCDF6004BC39C /* WAMScoreBoardViewController.m */,
 				FA4DD7841EBBC87300CB48FE /* Assets.xcassets */,
 				FA4DD7861EBBC87300CB48FE /* LaunchScreen.storyboard */,
 				FA4DD7891EBBC87300CB48FE /* Info.plist */,
@@ -228,9 +243,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FA4DD7801EBBC87300CB48FE /* ViewController.m in Sources */,
+				006B7E881EBBCDF6004BC39C /* WAMScoreBoardViewController.m in Sources */,
 				FA4DD77D1EBBC87300CB48FE /* AppDelegate.m in Sources */,
+				006B7E871EBBCDF6004BC39C /* WAMGameViewController.m in Sources */,
 				FA4DD77A1EBBC87300CB48FE /* main.m in Sources */,
+				006B7E861EBBCDF6004BC39C /* WAMCustomizeViewController.m in Sources */,
+				006B7E851EBBCDF6004BC39C /* GameListViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -389,6 +407,7 @@
 				FA4DD78E1EBBC87300CB48FE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
