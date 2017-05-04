@@ -10,7 +10,6 @@
 		EBC94501613CA88E22475E7B /* libPods-iHate.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6141079E682E2EE2B7DE6460 /* libPods-iHate.a */; };
 		FA4DD77A1EBBC87300CB48FE /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = FA4DD7791EBBC87300CB48FE /* main.m */; };
 		FA4DD77D1EBBC87300CB48FE /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = FA4DD77C1EBBC87300CB48FE /* AppDelegate.m */; };
-		FA4DD7801EBBC87300CB48FE /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FA4DD77F1EBBC87300CB48FE /* ViewController.m */; };
 		FA4DD7831EBBC87300CB48FE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA4DD7811EBBC87300CB48FE /* Main.storyboard */; };
 		FA4DD7851EBBC87300CB48FE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FA4DD7841EBBC87300CB48FE /* Assets.xcassets */; };
 		FA4DD7881EBBC87300CB48FE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA4DD7861EBBC87300CB48FE /* LaunchScreen.storyboard */; };
@@ -26,8 +25,6 @@
 		FA4DD7791EBBC87300CB48FE /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		FA4DD77B1EBBC87300CB48FE /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		FA4DD77C1EBBC87300CB48FE /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		FA4DD77E1EBBC87300CB48FE /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		FA4DD77F1EBBC87300CB48FE /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		FA4DD7821EBBC87300CB48FE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		FA4DD7841EBBC87300CB48FE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FA4DD7871EBBC87300CB48FE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -91,8 +88,6 @@
 				FA4DD77C1EBBC87300CB48FE /* AppDelegate.m */,
 				FA4DD7911EBBCF6000CB48FE /* DAO.h */,
 				FA4DD7921EBBCF6000CB48FE /* DAO.m */,
-				FA4DD77E1EBBC87300CB48FE /* ViewController.h */,
-				FA4DD77F1EBBC87300CB48FE /* ViewController.m */,
 				FA4DD7811EBBC87300CB48FE /* Main.storyboard */,
 				FA4DD7841EBBC87300CB48FE /* Assets.xcassets */,
 				FA4DD7861EBBC87300CB48FE /* LaunchScreen.storyboard */,
@@ -234,7 +229,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				FA4DD7931EBBCF6000CB48FE /* DAO.m in Sources */,
-				FA4DD7801EBBC87300CB48FE /* ViewController.m in Sources */,
 				FA4DD77D1EBBC87300CB48FE /* AppDelegate.m in Sources */,
 				FA4DD77A1EBBC87300CB48FE /* main.m in Sources */,
 			);
