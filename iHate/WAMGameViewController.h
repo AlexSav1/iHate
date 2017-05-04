@@ -10,4 +10,6 @@
 
 @interface WAMGameViewController : UIViewController
 
+@property (weak, nonatomic) IBOutlet UIImageView *imageView6;
+
 @end
