@@ -154,6 +154,7 @@
 				TargetAttributes = {
 					FA4DD7741EBBC87300CB48FE = {
 						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = X9KW2SQ39Q;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -369,6 +370,7 @@
 			baseConfigurationReference = 636053C1F7D76BFDD05434C5 /* Pods-iHate.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = X9KW2SQ39Q;
 				INFOPLIST_FILE = iHate/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.alex.iHate;
@@ -381,6 +383,7 @@
 			baseConfigurationReference = 4321CA90FD9D1FDC7144BAD3 /* Pods-iHate.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = X9KW2SQ39Q;
 				INFOPLIST_FILE = iHate/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.alex.iHate;

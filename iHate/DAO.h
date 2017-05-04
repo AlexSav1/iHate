@@ -9,6 +9,8 @@
 #import <Foundation/Foundation.h>
 
 @interface DAO : NSObject
+@property (strong, nonatomic) NSArray *games;
+@property (strong, nonatomic) NSMutableArray *topScores;
 
 + (id)sharedDataManager;
 

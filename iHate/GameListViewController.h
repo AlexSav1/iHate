@@ -7,7 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "DAO.h"
 
-@interface GameListViewController : UIViewController <UIPickerViewDataSource, UIPickerViewDelegate>
+@interface GameListViewController : UIViewController <UIPickerViewDataSource, UIPickerViewDelegate, UIImagePickerControllerDelegate>
+
+@property (strong, nonatomic) DAO *dao;
+@property (strong, nonatomic) NSString *game;
+
 
 @end

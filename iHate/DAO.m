@@ -19,4 +19,16 @@
     return sharedMyManager;
 }
 
+- (instancetype)init
+{
+    self = [super init];
+    if (self) {
+        
+        self.games = [NSArray arrayWithObjects: @"Whack-em", @"BBQ-em", @"Slice-em", nil];
+
+    }
+    return self;
+}
+
+
 @end
