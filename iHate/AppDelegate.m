@@ -15,9 +15,29 @@
 @implementation AppDelegate
 
 
+-(void) fetchFromDatabase{
+    
+    self.ref = [[FIRDatabase database] reference];
+    
+    [self.ref observeSingleEventOfType:FIRDataEventTypeValue withBlock:^(FIRDataSnapshot * _Nonnull snapshot) {
+        NSDictionary *postDict = snapshot.value;
+        
+        NSLog(@"Initial DATA: %@", postDict);
+        
+//        self.APIKEY = [postDict objectForKey:@"key"];
+//        
+//        NSLog(@"DATA: %@", self.APIKEY);
+        
+    }withCancelBlock:^(NSError * _Nonnull error) {
+        NSLog(@"%@", error.localizedDescription);
+    }];
+    
+}
+
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
     [FIRApp configure];
+    [self fetchFromDatabase];
     return YES;
 }
 
