@@ -1,8 +1,8 @@
 //
 //  WAMScoreBoardViewController.m
-//  iHate
+//  
 //
-//  Created by Emiko Clark on 5/4/17.
+//  Created by Alex Laptop on 5/4/17.
 //
 //
 
@@ -19,19 +19,16 @@
     // Do any additional setup after loading the view.
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+- (IBAction)replayPressed:(id)sender {
+    
+    
+    
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+- (IBAction)pickAnotherGamePressed:(id)sender {
+    
+    
+    
 }
-*/
 
 @end

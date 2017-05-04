@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface GameListViewController : UIViewController
+@interface GameListViewController : UIViewController <UIPickerViewDataSource, UIPickerViewDelegate>
 
 @end

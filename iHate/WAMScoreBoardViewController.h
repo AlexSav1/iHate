@@ -1,13 +1,15 @@
 //
 //  WAMScoreBoardViewController.h
-//  iHate
+//  
 //
-//  Created by Emiko Clark on 5/4/17.
+//  Created by Alex Laptop on 5/4/17.
 //
 //
 
 #import <UIKit/UIKit.h>
 
 @interface WAMScoreBoardViewController : UIViewController
+
+@property (weak, nonatomic) IBOutlet UILabel *scoresLabel;
 
 @end
