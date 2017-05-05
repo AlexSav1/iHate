@@ -20,11 +20,46 @@
     
     self.dao = [DAO sharedDataManager];
     
-    self.gameTime = 30;
-    self.currentGameTime = 30;
-    
+    self.dao.currentVictim = self.currentVictim;
+
+    self.gameTime = 15;
+    self.currentGameTime = 15;
     self.gameFinished = FALSE;
+    self.timeLabel.text = [NSString stringWithFormat:@":%d Secs", self.currentGameTime];
     
+//    if(self.currentVictim != nil){
+//        [self.button1 setBackgroundImage:self.currentVictim forState:UIControlStateNormal];
+//        [self.button2 setBackgroundImage:self.currentVictim forState:UIControlStateNormal];
+//        [self.button3 setBackgroundImage:self.currentVictim forState:UIControlStateNormal];
+//        [self.button4 setBackgroundImage:self.currentVictim forState:UIControlStateNormal];
+//        [self.button5 setBackgroundImage:self.currentVictim forState:UIControlStateNormal];
+//        [self.button6 setBackgroundImage:self.currentVictim forState:UIControlStateNormal];
+//        [self.button7 setBackgroundImage:self.currentVictim forState:UIControlStateNormal];
+//        [self.button8 setBackgroundImage:self.currentVictim forState:UIControlStateNormal];
+//        [self.button9 setBackgroundImage:self.currentVictim forState:UIControlStateNormal];
+//        [self.button10 setBackgroundImage:self.currentVictim forState:UIControlStateNormal];
+//        [self.button11 setBackgroundImage:self.currentVictim forState:UIControlStateNormal];
+//        [self.button12 setBackgroundImage:self.currentVictim forState:UIControlStateNormal];
+//    }
+//    
+//    
+//    self.howOftenHeadsPopUp = arc4random_uniform(5);
+//    
+//    [NSTimer scheduledTimerWithTimeInterval:self.howOftenHeadsPopUp target:self selector:@selector(activateVictim) userInfo:nil repeats:YES];
+//    
+//    [NSTimer scheduledTimerWithTimeInterval:1 target:self selector:@selector(updateTime) userInfo:nil repeats:YES];
+//    
+//    [NSTimer scheduledTimerWithTimeInterval:self.gameTime target:self selector:@selector(finishGame) userInfo:nil repeats:NO];
+}
+
+- (void) viewWillAppear:(BOOL)animated   {
+
+    
+    self.gameTime = 15;
+    self.currentGameTime = 15;
+    self.gameFinished = FALSE;
+    self.timeLabel.text = [NSString stringWithFormat:@":%d Secs", self.currentGameTime];
+
     if(self.currentVictim != nil){
         [self.button1 setBackgroundImage:self.currentVictim forState:UIControlStateNormal];
         [self.button2 setBackgroundImage:self.currentVictim forState:UIControlStateNormal];
@@ -48,11 +83,15 @@
     [NSTimer scheduledTimerWithTimeInterval:1 target:self selector:@selector(updateTime) userInfo:nil repeats:YES];
     
     [NSTimer scheduledTimerWithTimeInterval:self.gameTime target:self selector:@selector(finishGame) userInfo:nil repeats:NO];
+    
+    
+    
+    
 }
 
 -(void) updateTime{
     self.currentGameTime--;
-    self.timeLabel.text = [NSString stringWithFormat:@":%d Sec", self.currentGameTime];
+    self.timeLabel.text = [NSString stringWithFormat:@":%d Secs", self.currentGameTime];
 }
 
 -(void) finishGame {

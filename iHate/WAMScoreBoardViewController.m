@@ -24,7 +24,7 @@
     
     
     for (PlayerScore *player in self.dao.playerScores) {
-        scores = [scores stringByAppendingString:[NSString stringWithFormat:@"%@ = %@\n", player.name, player.score]];
+        scores = [scores stringByAppendingString:[NSString stringWithFormat:@"%@ - %@\n", player.name, player.score]];
     }
     
     NSLog(@"COOOOOOOOL: %@", scores);
@@ -35,13 +35,17 @@
 
 - (IBAction)replayPressed:(id)sender {
     
+    WAMGameViewController *gameVC = [[WAMGameViewController alloc] init];
+    DAO *dao = [DAO sharedDataManager];
+    gameVC.currentVictim = dao.currentVictim;
+    [self dismissViewControllerAnimated:true completion:nil ];
     
     
 }
 
 - (IBAction)pickAnotherGamePressed:(id)sender {
-    
-    
+    GameListViewController *gameListVC = [[GameListViewController alloc]init];
+    [self presentViewController:gameListVC animated:true completion:nil];
     
 }
 

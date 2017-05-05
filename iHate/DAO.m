@@ -26,6 +26,7 @@
         self.games = @[@"Whack-em", @"BBQ-em", @"Slice-em"];
         self.currentScore = 0;
         self.playerScores = [[NSMutableArray alloc]init];
+        self.currentVictim = [[UIImage alloc] init];
     }
     return self;
 }
@@ -70,8 +71,10 @@
     
     
     NSSortDescriptor *sortDescriptor;
-    sortDescriptor = [[NSSortDescriptor alloc] initWithKey:@"score"
-                                                 ascending:YES];
+    sortDescriptor = [[NSSortDescriptor alloc] initWithKey:@"score" ascending:NO];
+    
+//    sortDescriptor = [[NSSortDescriptor alloc] initWithKey:@"score" ascending:YES];
+    
     NSArray *sortDescriptors = [NSArray arrayWithObject:sortDescriptor];
     NSArray *sortedArray = [self.playerScores sortedArrayUsingDescriptors:sortDescriptors];
     
