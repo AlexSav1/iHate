@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="de9-hR-VWq">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -92,15 +92,118 @@
                                 <rect key="frame" x="0.0" y="101" width="375" height="419"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="7dm-Fh-tL8">
-                                <rect key="frame" x="104" y="297" width="79" height="62"/>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dgs-Kt-YSb">
+                                <rect key="frame" x="209" y="401" width="67" height="60"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
+                                <state key="normal" backgroundImage="trump"/>
+                                <connections>
+                                    <action selector="button11Pressed:" destination="de9-hR-VWq" eventType="touchUpInside" id="je5-cu-rf4"/>
+                                </connections>
+                            </button>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wnY-u1-SOq">
+                                <rect key="frame" x="102" y="401" width="67" height="60"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" backgroundImage="trump"/>
+                                <connections>
+                                    <action selector="button10Pressed:" destination="de9-hR-VWq" eventType="touchUpInside" id="c2V-bv-d7z"/>
+                                </connections>
+                            </button>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BR5-Qu-6Rq">
+                                <rect key="frame" x="0.0" y="401" width="67" height="60"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" backgroundImage="trump"/>
+                                <connections>
+                                    <action selector="button9Pressed:" destination="de9-hR-VWq" eventType="touchUpInside" id="BEP-7p-cDu"/>
+                                </connections>
+                            </button>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="N8J-oT-G5m">
+                                <rect key="frame" x="300" y="301" width="67" height="60"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" backgroundImage="trump"/>
+                                <connections>
+                                    <action selector="button8Pressed:" destination="de9-hR-VWq" eventType="touchUpInside" id="Sdt-cg-g9A"/>
+                                </connections>
+                            </button>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wbX-xq-rPy">
+                                <rect key="frame" x="202" y="302" width="67" height="60"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" backgroundImage="trump"/>
+                                <connections>
+                                    <action selector="button7Pressed:" destination="de9-hR-VWq" eventType="touchUpInside" id="eEf-KV-cpS"/>
+                                </connections>
+                            </button>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EHD-Ps-9d3">
+                                <rect key="frame" x="110" y="303" width="67" height="60"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" backgroundImage="trump"/>
+                                <connections>
+                                    <action selector="button6Pressed:" destination="de9-hR-VWq" eventType="touchUpInside" id="Yhc-0f-geA"/>
+                                </connections>
+                            </button>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eUm-Jn-rt2">
+                                <rect key="frame" x="9" y="303" width="67" height="60"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" backgroundImage="trump"/>
+                                <connections>
+                                    <action selector="button5Pressed:" destination="de9-hR-VWq" eventType="touchUpInside" id="ENW-L4-3rv"/>
+                                </connections>
+                            </button>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pTQ-1t-mw0">
+                                <rect key="frame" x="292" y="213" width="67" height="60"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" backgroundImage="trump"/>
+                                <connections>
+                                    <action selector="button4Pressed:" destination="de9-hR-VWq" eventType="touchUpInside" id="8eU-nF-rHc"/>
+                                </connections>
+                            </button>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oLd-Qg-xEI">
+                                <rect key="frame" x="202" y="213" width="67" height="60"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" backgroundImage="trump"/>
+                                <connections>
+                                    <action selector="button3Pressed:" destination="de9-hR-VWq" eventType="touchUpInside" id="sxH-eC-76l"/>
+                                </connections>
+                            </button>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oHB-aU-vas">
+                                <rect key="frame" x="110" y="212" width="67" height="60"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" backgroundImage="trump"/>
+                                <connections>
+                                    <action selector="button2Pressed:" destination="de9-hR-VWq" eventType="touchUpInside" id="Iut-CZ-sfn"/>
+                                </connections>
+                            </button>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KdK-wp-QvI">
+                                <rect key="frame" x="16" y="213" width="67" height="60"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" backgroundImage="trump"/>
+                                <connections>
+                                    <action selector="button1Pressed:" destination="de9-hR-VWq" eventType="touchUpInside" id="5ca-Cy-rhS"/>
+                                </connections>
+                            </button>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rWM-sJ-QT3">
+                                <rect key="frame" x="308" y="401" width="67" height="60"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" backgroundImage="trump"/>
+                                <connections>
+                                    <action selector="button12Pressed:" destination="de9-hR-VWq" eventType="touchUpInside" id="kdb-7A-BUD"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <connections>
-                        <outlet property="imageView6" destination="7dm-Fh-tL8" id="Fqi-69-XoG"/>
+                        <outlet property="button1" destination="KdK-wp-QvI" id="mIh-sk-Bhq"/>
+                        <outlet property="button10" destination="wnY-u1-SOq" id="wDs-Wa-M3Q"/>
+                        <outlet property="button11" destination="Dgs-Kt-YSb" id="cZO-re-pub"/>
+                        <outlet property="button12" destination="rWM-sJ-QT3" id="XIo-00-HQF"/>
+                        <outlet property="button2" destination="oHB-aU-vas" id="aZw-Fa-12O"/>
+                        <outlet property="button3" destination="oLd-Qg-xEI" id="mZg-JO-xC0"/>
+                        <outlet property="button4" destination="pTQ-1t-mw0" id="Sh8-sP-34b"/>
+                        <outlet property="button5" destination="eUm-Jn-rt2" id="7Xc-Y0-Q6n"/>
+                        <outlet property="button6" destination="EHD-Ps-9d3" id="IMD-2e-MEf"/>
+                        <outlet property="button7" destination="wbX-xq-rPy" id="8wU-Md-YFj"/>
+                        <outlet property="button8" destination="N8J-oT-G5m" id="Ttu-9L-W4H"/>
+                        <outlet property="button9" destination="BR5-Qu-6Rq" id="oVm-k4-p9M"/>
                         <segue destination="fw8-Bn-h6x" kind="show" identifier="showResults" id="nHe-N4-82k"/>
                     </connections>
                 </viewController>
@@ -163,6 +266,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="trump" width="427" height="547"/>
         <image name="whack-a-mole" width="550" height="400"/>
     </resources>
 </document>
