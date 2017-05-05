@@ -23,13 +23,32 @@
     self.dao = DAO.sharedDataManager;
     self.pickerView.delegate = self;
     self.pickerView.dataSource = self;
+    if ([[Reachability reachabilityForInternetConnection]currentReachabilityStatus]==NotReachable)
+    {
+        dispatch_async(dispatch_get_main_queue(), ^{
+            UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"Failed"
+                                                                                     message:@"NO CONNECTION"
+                                                                              preferredStyle:UIAlertControllerStyleAlert];
+            //We add buttons to the alert controller by creating UIAlertActions:
+            UIAlertAction *actionOk = [UIAlertAction actionWithTitle:@"Ok"
+                                                               style:UIAlertActionStyleDefault
+                                                             handler:nil]; //You can use a block here to handle a press on this button
+            [alertController addAction:actionOk];
+             [self presentViewController:alertController animated:YES completion:nil];
+            
+        });
+        
+    }
+    else{
+
     [self.dao fetchFromDatabase];
-    self.dao.currenBGSong = @"bgSound";
+    }
+    self.dao.currentBGSong = @"bgSound";
     [self.dao bgMusic];
 }
 
 -(void)viewWillAppear:(BOOL)animated{
-    self.dao.currenBGSong = @"bgSound";
+    self.dao.currentBGSong = @"bgSound";
     [self.dao bgMusic];
     
 }

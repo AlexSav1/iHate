@@ -10,6 +10,7 @@
 #import "PlayerScore.h"
 #import <AVFoundation/AVFoundation.h>
 #import <AudioToolbox/AudioToolbox.h>
+#import "Reachability.h"
 @import Firebase;
 
 @interface DAO : NSObject

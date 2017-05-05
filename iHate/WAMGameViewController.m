@@ -20,8 +20,8 @@
     
     
     self.dao = [DAO sharedDataManager];
-//    self.dao.currentBGSong = @“bgSound”;
-//    [self.dao bgMusic];
+    self.dao.currentBGSong = @"bgSound";
+    [self.dao bgMusic];
     self.dao.currentVictim = self.currentVictim;
 
     self.gameTime = 15;
