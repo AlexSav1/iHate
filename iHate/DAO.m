@@ -59,9 +59,9 @@
          //NSLog(@"NAMES: %@", names[2]);
         //NSLog(@"SCORES: %@", scores[2]);
         
-        scores = [scores sortedArrayUsingSelector: @selector(compare:)];
+        //scores = [scores sortedArrayUsingSelector: @selector(compare:)];
         
-        NSLog(@"SCORES: %@", scores);
+        //NSLog(@"SCORES: %@", scores);
         
     }withCancelBlock:^(NSError * _Nonnull error) {
         NSLog(@"%@", error.localizedDescription);

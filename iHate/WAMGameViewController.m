@@ -20,18 +20,21 @@
     
     self.dao = [DAO sharedDataManager];
     
-//    [self.button1 setBackgroundImage:self.currentVictim forState:UIControlStateNormal];
-//    [self.button2 setBackgroundImage:self.currentVictim forState:UIControlStateNormal];
-//    [self.button3 setBackgroundImage:self.currentVictim forState:UIControlStateNormal];
-//    [self.button4 setBackgroundImage:self.currentVictim forState:UIControlStateNormal];
-//    [self.button5 setBackgroundImage:self.currentVictim forState:UIControlStateNormal];
-//    [self.button6 setBackgroundImage:self.currentVictim forState:UIControlStateNormal];
-//    [self.button7 setBackgroundImage:self.currentVictim forState:UIControlStateNormal];
-//    [self.button8 setBackgroundImage:self.currentVictim forState:UIControlStateNormal];
-//    [self.button9 setBackgroundImage:self.currentVictim forState:UIControlStateNormal];
-//    [self.button10 setBackgroundImage:self.currentVictim forState:UIControlStateNormal];
-//    [self.button11 setBackgroundImage:self.currentVictim forState:UIControlStateNormal];
-//    [self.button12 setBackgroundImage:self.currentVictim forState:UIControlStateNormal];
+    if(self.currentVictim != nil){
+        [self.button1 setBackgroundImage:self.currentVictim forState:UIControlStateNormal];
+        [self.button2 setBackgroundImage:self.currentVictim forState:UIControlStateNormal];
+        [self.button3 setBackgroundImage:self.currentVictim forState:UIControlStateNormal];
+        [self.button4 setBackgroundImage:self.currentVictim forState:UIControlStateNormal];
+        [self.button5 setBackgroundImage:self.currentVictim forState:UIControlStateNormal];
+        [self.button6 setBackgroundImage:self.currentVictim forState:UIControlStateNormal];
+        [self.button7 setBackgroundImage:self.currentVictim forState:UIControlStateNormal];
+        [self.button8 setBackgroundImage:self.currentVictim forState:UIControlStateNormal];
+        [self.button9 setBackgroundImage:self.currentVictim forState:UIControlStateNormal];
+        [self.button10 setBackgroundImage:self.currentVictim forState:UIControlStateNormal];
+        [self.button11 setBackgroundImage:self.currentVictim forState:UIControlStateNormal];
+        [self.button12 setBackgroundImage:self.currentVictim forState:UIControlStateNormal];
+    }
+    
     
     self.howOftenHeadsPopUp = arc4random_uniform(5);
     

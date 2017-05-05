@@ -53,6 +53,11 @@
     [self presentViewController:picker animated:YES completion:NULL];
 }
 
+- (IBAction)continuePressed:(id)sender {
+    // push to gameVC
+    [self performSegueWithIdentifier:@"showGame" sender:self.chosenImage];
+}
+
 //MARK: Picker View Methods
 // The number of columns of data
 - (NSInteger)numberOfComponentsInPickerView:(UIPickerView *)pickerView
@@ -103,10 +108,9 @@
 - (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info {
     
     UIImage *chosenImage = info[UIImagePickerControllerEditedImage];
-    
+    self.chosenImage = chosenImage;
     [picker dismissViewControllerAnimated:YES completion:^{
-        // push to gameVC
-        [self performSegueWithIdentifier:@"showGame" sender:chosenImage];
+        self.imageView.image = chosenImage;
     }];
 }
 

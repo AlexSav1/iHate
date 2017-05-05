@@ -13,6 +13,8 @@
 
 @property (strong, nonatomic) DAO *dao;
 @property (strong, nonatomic) NSString *game;
+@property UIImage *chosenImage;
+@property (weak, nonatomic) IBOutlet UIImageView *imageView;
 
 
 @end
