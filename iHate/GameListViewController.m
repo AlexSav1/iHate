@@ -21,21 +21,25 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.dao = DAO.sharedDataManager;
-    
+    self.pickerView.delegate = self;
+    self.pickerView.dataSource = self;
+    [self.dao fetchFromDatabase];
+}
+
+//MARK: Button Actions
+- (IBAction)takePhotoPressed:(id)sender {
+    NSLog(@"Scores DICK: %@", self.dao.scoresDict);
     // If no camera, show alert
     if (![UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypeCamera]) {
         [self displayError:@"Your device does not have a camera!"];
+    } else {
+        UIImagePickerController *picker = [[UIImagePickerController alloc] init];
+        picker.delegate = self;
+        picker.allowsEditing = YES;
+        picker.sourceType = UIImagePickerControllerSourceTypeCamera;
+        
+        [self presentViewController:picker animated:YES completion:NULL];
     }
-    
-}
-
-- (IBAction)takePhotoPressed:(id)sender {
-    UIImagePickerController *picker = [[UIImagePickerController alloc] init];
-    picker.delegate = self;
-    picker.allowsEditing = YES;
-    picker.sourceType = UIImagePickerControllerSourceTypeCamera;
-    
-    [self presentViewController:picker animated:YES completion:NULL];
     
 }
 
@@ -48,6 +52,7 @@
     [self presentViewController:picker animated:YES completion:NULL];
 }
 
+//MARK: Picker View Methods
 // The number of columns of data
 - (NSInteger)numberOfComponentsInPickerView:(UIPickerView *)pickerView
 {
@@ -61,28 +66,13 @@
     
 }
 
-- (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info {
-    
-    UIImage *selectedImage = [info objectForKey:UIImagePickerControllerOriginalImage];
-    UIImage *chosenImage = info[UIImagePickerControllerEditedImage];
-//    NSData *imageData = UIImageJPEGRepresentation(chosenImage, 0.25);
-
-    [picker dismissViewControllerAnimated:YES completion:NULL];
-
-    // push to gameVC
-    [self performSegueWithIdentifier:@"showGame" sender:self];
-    
-}
-
 
 // The data to return for the row and component (column) that's being passed in
 - (NSString*)pickerView:(UIPickerView *)pickerView
             titleForRow:(NSInteger)row
            forComponent:(NSInteger)component{
     
-    
-//    return self.pickerData[row];
-    return @"game name";
+    return self.dao.games[row];
 }
 
 
@@ -104,24 +94,25 @@
     
 }
 
+//MARK: Image Picker Methods
 - (void)imagePickerControllerDidCancel:(UIImagePickerController *)picker {
-    
     [picker dismissViewControllerAnimated:YES completion:NULL];
+}
+
+- (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info {
     
+    UIImage *chosenImage = info[UIImagePickerControllerEditedImage];
+    
+    [picker dismissViewControllerAnimated:YES completion:^{
+        // push to gameVC
+        [self performSegueWithIdentifier:@"showGame" sender:chosenImage];
+    }];
 }
 
 
-
-
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
-{
-    if ([[segue identifier] isEqualToString:@"showGame"]) {
-        // Get destination view
-        WAMGameViewController *vc = [segue destinationViewController];
-        
-        // Pass the information to your destination view
-//        [vc setVictimPhoto:self.victimPhoto];
-    }
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    WAMGameViewController *gameVC = segue.destinationViewController;
+    gameVC.currentVictim = sender;
 }
 
 
@@ -141,9 +132,10 @@
     // Add the button to the controller
     [alert addAction:okButton];
     
+    [self presentViewController:alert animated:YES completion:nil];
     // Display the alert controller on the topmost viewController
-    UINavigationController *navigationController = (UINavigationController *)[UIApplication sharedApplication].keyWindow.rootViewController;
-    [navigationController.topViewController presentViewController:alert animated:YES completion:nil];
+//    UINavigationController *navigationController = (UINavigationController *)[UIApplication sharedApplication].keyWindow.rootViewController;
+//    [navigationController.topViewController presentViewController:alert animated:YES completion:nil];
 }
 
 

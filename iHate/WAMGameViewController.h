@@ -7,6 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <AudioToolbox/AudioToolbox.h>
+#import "DAO.h"
 
 @interface WAMGameViewController : UIViewController
 
@@ -14,9 +16,13 @@
 
 @property int numberOfHeadsPoppingUp;
 
+@property DAO *dao;
+
 //@property NSArray
 
 @property UIImage *currentVictim;
+
+@property (weak, nonatomic) IBOutlet UILabel *scoreLabel;
 
 @property (weak, nonatomic) IBOutlet UIButton *button1;
 @property (weak, nonatomic) IBOutlet UIButton *button2;
