@@ -14,7 +14,7 @@
 
 @property int howOftenHeadsPopUp;
 
-@property int numberOfHeadsPoppingUp;
+//@property int numberOfHeadsPoppingUp;
 
 @property DAO *dao;
 

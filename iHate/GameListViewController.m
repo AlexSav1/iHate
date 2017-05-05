@@ -29,6 +29,7 @@
 //MARK: Button Actions
 - (IBAction)takePhotoPressed:(id)sender {
     NSLog(@"Scores DICK: %@", self.dao.scoresDict);
+    
     // If no camera, show alert
     if (![UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypeCamera]) {
         [self displayError:@"Your device does not have a camera!"];
@@ -133,9 +134,6 @@
     [alert addAction:okButton];
     
     [self presentViewController:alert animated:YES completion:nil];
-    // Display the alert controller on the topmost viewController
-//    UINavigationController *navigationController = (UINavigationController *)[UIApplication sharedApplication].keyWindow.rootViewController;
-//    [navigationController.topViewController presentViewController:alert animated:YES completion:nil];
 }
 
 

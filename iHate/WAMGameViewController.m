@@ -42,7 +42,57 @@
     
     self.howOftenHeadsPopUp = arc4random_uniform(5);
     
-    //self.numberOfHeadsPoppingUp = arc4random_uniform(3);
+    int numberOfHeadsPoppingUp = arc4random_uniform(3);
+    
+    switch (numberOfHeadsPoppingUp) {
+        case 0:
+            [self whichHeads];
+            break;
+        case 1:
+            [self whichHeads];
+            [self whichHeads];
+            break;
+        case 2:
+            [self whichHeads];
+            [self whichHeads];
+            [self whichHeads];
+            break;
+        default:
+            break;
+    }
+}
+
+-(void) turnButtonOff: (NSTimer*) timer {
+    UIButton *button = timer.userInfo;
+
+    if(!button.hidden){
+        button.hidden = YES;
+    }
+}
+
+- (void) playHitSound {
+    SystemSoundID audioEffect;
+    NSString *path;
+    int whichSound = arc4random_uniform(3);
+    
+    if (whichSound == 0) {
+        path = [[NSBundle mainBundle] pathForResource : @"YouBetterBelieve" ofType :@"mp3"];
+    } else {
+        path = [[NSBundle mainBundle] pathForResource : @"Wrong" ofType :@"mp3"];
+    }
+    
+    if ([[NSFileManager defaultManager] fileExistsAtPath : path]) {
+        NSURL *pathURL = [NSURL fileURLWithPath: path];
+        AudioServicesCreateSystemSoundID((__bridge CFURLRef) pathURL, &audioEffect);
+        AudioServicesPlaySystemSound(audioEffect);
+    }
+    else {
+        NSLog(@"error, file not found: %@", path);
+    }
+    
+}
+
+-(void) whichHeads {
     
     int whichHeadsPopUp = arc4random_uniform(12);
     
@@ -97,35 +147,6 @@
             break;
         default:
             break;
-    }
-}
-
--(void) turnButtonOff: (NSTimer*) timer {
-    UIButton *button = timer.userInfo;
-
-    if(!button.hidden){
-        button.hidden = YES;
-    }
-}
-
-- (void) playHitSound {
-    SystemSoundID audioEffect;
-    NSString *path;
-    int whichSound = arc4random_uniform(3);
-    
-    if (whichSound == 0) {
-        path = [[NSBundle mainBundle] pathForResource : @"YouBetterBelieve" ofType :@"mp3"];
-    } else {
-        path = [[NSBundle mainBundle] pathForResource : @"Wrong" ofType :@"mp3"];
-    }
-    
-    if ([[NSFileManager defaultManager] fileExistsAtPath : path]) {
-        NSURL *pathURL = [NSURL fileURLWithPath: path];
-        AudioServicesCreateSystemSoundID((__bridge CFURLRef) pathURL, &audioEffect);
-        AudioServicesPlaySystemSound(audioEffect);
-    }
-    else {
-        NSLog(@"error, file not found: %@", path);
     }
     
 }
