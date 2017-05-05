@@ -142,13 +142,21 @@
     
     switch (whichSound) {
         case 0:
-            path = [[NSBundle mainBundle] pathForResource : @"sound1" ofType :@"mp3"];
+            path = [[NSBundle mainBundle] pathForResource : @"bloodSplatSound" ofType :@"mp3"];
             break;
         case 1:
-            path = [[NSBundle mainBundle] pathForResource : @"sound2" ofType :@"mp3"];
+            path = [[NSBundle mainBundle] pathForResource : @"squishSound" ofType :@"mp3"];
             break;
+        case 2:
+            path = [[NSBundle mainBundle] pathForResource : @"boneSound" ofType :@"mp3"];
+            break;
+        case 3:
+            path = [[NSBundle mainBundle] pathForResource : @"squishySound" ofType :@"mp3"];
+            break;
+            
         default:
             break;
+            
     }
     
     if ([[NSFileManager defaultManager] fileExistsAtPath : path]) {
@@ -224,74 +232,73 @@
 //MARK: Button Actions
 - (IBAction)button1Pressed:(id)sender {
     self.button1.hidden = YES;
-    //[self playHitSound];
     self.dao.currentScore++;
     self.scoreLabel.text = [NSString stringWithFormat: @"Score:%i", self.dao.currentScore];
-    //[self playHitSound];
+    [self playHitSound];
 }
 - (IBAction)button2Pressed:(id)sender {
     self.button2.hidden = YES;
-    //[self playHitSound];
+    [self playHitSound];
     self.dao.currentScore++;
     self.scoreLabel.text = [NSString stringWithFormat: @"Score:%i", self.dao.currentScore];
 }
 - (IBAction)button3Pressed:(id)sender {
     self.button3.hidden = YES;
-    //[self playHitSound];
+    [self playHitSound];
     self.dao.currentScore++;
     self.scoreLabel.text = [NSString stringWithFormat: @"Score:%i", self.dao.currentScore];
 }
 - (IBAction)button4Pressed:(id)sender {
     self.button4.hidden = YES;
-    //[self playHitSound];
+    [self playHitSound];
     self.dao.currentScore++;
     self.scoreLabel.text = [NSString stringWithFormat: @"Score:%i", self.dao.currentScore];
 }
 - (IBAction)button5Pressed:(id)sender {
     self.button5.hidden = YES;
-    //[self playHitSound];
+    [self playHitSound];
     self.dao.currentScore++;
     self.scoreLabel.text = [NSString stringWithFormat: @"Score:%i", self.dao.currentScore];
 }
 - (IBAction)button6Pressed:(id)sender {
     self.button6.hidden = YES;
-    //[self playHitSound];
+    [self playHitSound];
     self.dao.currentScore++;
     self.scoreLabel.text = [NSString stringWithFormat: @"Score:%i", self.dao.currentScore];
 }
 - (IBAction)button7Pressed:(id)sender {
     self.button7.hidden = YES;
-    //[self playHitSound];
+    [self playHitSound];
     self.dao.currentScore++;
     self.scoreLabel.text = [NSString stringWithFormat: @"Score:%i", self.dao.currentScore];
 }
 - (IBAction)button8Pressed:(id)sender {
     self.button8.hidden = YES;
-    //[self playHitSound];
+    [self playHitSound];
     self.dao.currentScore++;
     self.scoreLabel.text = [NSString stringWithFormat: @"Score:%i", self.dao.currentScore];
 }
 - (IBAction)button9Pressed:(id)sender {
     self.button9.hidden = YES;
-    //[self playHitSound];
+    [self playHitSound];
     self.dao.currentScore++;
     self.scoreLabel.text = [NSString stringWithFormat: @"Score:%i", self.dao.currentScore];
 }
 - (IBAction)button10Pressed:(id)sender {
     self.button10.hidden = YES;
-    //[self playHitSound];
+    [self playHitSound];
     self.dao.currentScore++;
     self.scoreLabel.text = [NSString stringWithFormat: @"Score:%i", self.dao.currentScore];
 }
 - (IBAction)button11Pressed:(id)sender {
     self.button11.hidden = YES;
-    //[self playHitSound];
+    [self playHitSound];
     self.dao.currentScore++;
     self.scoreLabel.text = [NSString stringWithFormat: @"Score:%i", self.dao.currentScore];
 }
 - (IBAction)button12Pressed:(id)sender {
     self.button12.hidden = YES;
-    //[self playHitSound];
+    [self playHitSound];
     self.dao.currentScore++;
     self.scoreLabel.text = [NSString stringWithFormat: @"Score:%i", self.dao.currentScore];
 }
