@@ -24,17 +24,17 @@
 //    [self.dao bgMusic];
     self.dao.currentVictim = self.currentVictim;
 
-    self.gameTime = 15;
-    self.currentGameTime = 15;
-    self.gameFinished = FALSE;
-    self.timeLabel.text = [NSString stringWithFormat:@":%d Secs", self.currentGameTime];
+//    self.gameTime = 30;
+//    self.currentGameTime = 30;
+//    self.gameFinished = FALSE;
+//    self.timeLabel.text = [NSString stringWithFormat:@":%d Secs", self.currentGameTime];
 }
 
 - (void) viewWillAppear:(BOOL)animated   {
 
     
-    self.gameTime = 15;
-    self.currentGameTime = 15;
+    self.gameTime = 30;
+    self.currentGameTime = 30;
     self.gameFinished = FALSE;
     self.timeLabel.text = [NSString stringWithFormat:@":%d Secs", self.currentGameTime];
     self.scoreLabel.text = @"0";
