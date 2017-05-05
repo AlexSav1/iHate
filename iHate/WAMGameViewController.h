@@ -22,6 +22,9 @@
 
 @property int gameTime;
 @property int currentGameTime;
+@property NSTimer *timer1;
+@property NSTimer *timer2;
+@property NSTimer *timer3;
 
 @property UIImage *currentVictim;
 

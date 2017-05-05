@@ -33,6 +33,8 @@
 
 -(void) fetchFromDatabase{
     
+    
+    
     self.ref = [[FIRDatabase database] reference];
     
     [self.ref observeSingleEventOfType:FIRDataEventTypeValue withBlock:^(FIRDataSnapshot * _Nonnull snapshot) {
@@ -71,9 +73,9 @@
     
     
     NSSortDescriptor *sortDescriptor;
-    sortDescriptor = [[NSSortDescriptor alloc] initWithKey:@"score" ascending:NO];
+//    sortDescriptor = [[NSSortDescriptor alloc] initWithKey:@"score" ascending:NO];
     
-//    sortDescriptor = [[NSSortDescriptor alloc] initWithKey:@"score" ascending:YES];
+    sortDescriptor = [[NSSortDescriptor alloc] initWithKey:@"score" ascending:YES];
     
     NSArray *sortDescriptors = [NSArray arrayWithObject:sortDescriptor];
     NSArray *sortedArray = [self.playerScores sortedArrayUsingDescriptors:sortDescriptors];
@@ -96,17 +98,13 @@
               andName: (NSString*) newName{
     
     NSSortDescriptor *sortDescriptor;
-    sortDescriptor = [[NSSortDescriptor alloc] initWithKey:@"score" ascending:NO];
-    //sortDescriptor = [[NSSortDescriptor alloc] initWithKey:@"score"
-    //                                             ascending:YES];
+//    sortDescriptor = [[NSSortDescriptor alloc] initWithKey:@"score" ascending:NO];
+    
+    sortDescriptor = [[NSSortDescriptor alloc] initWithKey:@"score" ascending:YES];
+    
     NSArray *sortDescriptors = [NSArray arrayWithObject:sortDescriptor];
     NSArray *sortedArray = [self.playerScores sortedArrayUsingDescriptors:sortDescriptors];
     NSMutableArray *mutSortedArray = [[NSMutableArray alloc]initWithArray:sortedArray];
-    
-    
-    //NSNumber *newScore = [[NSNumber alloc]initWithInt:16];
-    //NSString *newName = @"fuckThis";
-    
     
     for (PlayerScore *player in mutSortedArray) {
         NSLog(@"SCOREEEEE: %@", player.score);
@@ -132,7 +130,7 @@
 
 - (void)bgMusic{
     //_currenBGSong = @"bgSound";
-    NSURL *musicFile = [[NSBundle mainBundle] URLForResource:_currenBGSong
+    NSURL *musicFile = [[NSBundle mainBundle] URLForResource:_currentBGSong
                                                withExtension:@"wav"];
     self.backgroundMusic = [[AVAudioPlayer alloc] initWithContentsOfURL:musicFile
                                                                   error:nil];

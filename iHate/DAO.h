@@ -14,7 +14,7 @@
 
 @interface DAO : NSObject
 @property(nonatomic, strong) AVAudioPlayer *backgroundMusic;
-@property NSString *currenBGSong;
+@property NSString *currentBGSong;
 @property (strong, nonatomic) UIImage *currentVictim;
 
 

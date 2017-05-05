@@ -20,12 +20,16 @@
     self.dao = [DAO sharedDataManager];
     
     NSString *scores = @"";
-    
-    
-    
-    for (PlayerScore *player in self.dao.playerScores) {
-        scores = [scores stringByAppendingString:[NSString stringWithFormat:@"%@ - %@\n", player.name, player.score]];
+
+    for (int i = self.dao.playerScores.count; i<=0; i--) {
+        NSString *name = [self.dao.playerScores[i] name];
+        NSString *score = [self.dao.playerScores[i] score];
+        scores = [scores stringByAppendingString:[NSString stringWithFormat:@"%@ - %@\n", name, score]];
     }
+    
+//    for (PlayerScore *player in self.dao.playerScores) {
+//        scores = [scores stringByAppendingString:[NSString stringWithFormat:@"%@ - %@\n", player.name, player.score]];
+//    }
     
     NSLog(@"COOOOOOOOL: %@", scores);
     
@@ -37,6 +41,8 @@
     
     WAMGameViewController *gameVC = [[WAMGameViewController alloc] init];
     DAO *dao = [DAO sharedDataManager];
+    gameVC.scoreLabel.text = @"Score : 0";
+    dao.currentScore = 0;
     gameVC.currentVictim = dao.currentVictim;
     [self dismissViewControllerAnimated:true completion:nil ];
     
