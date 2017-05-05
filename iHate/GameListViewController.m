@@ -28,7 +28,7 @@
 
 //MARK: Button Actions
 - (IBAction)takePhotoPressed:(id)sender {
-    NSLog(@"Scores DICK: %@", self.dao.scoresDict);
+    NSLog(@"Scores : %@", self.dao.scoresDict);
     
     // If no camera, show alert
     if (![UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypeCamera]) {
