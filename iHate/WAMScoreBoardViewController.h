@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "GameListViewController.h"
 #import "DAO.h"
 
 @interface WAMScoreBoardViewController : UIViewController
