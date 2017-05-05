@@ -128,7 +128,7 @@
 }
 
 - (void)bgMusic{
-    _currenBGSong = @"bgSound";
+    //_currenBGSong = @"bgSound";
     NSURL *musicFile = [[NSBundle mainBundle] URLForResource:_currenBGSong
                                                withExtension:@"wav"];
     self.backgroundMusic = [[AVAudioPlayer alloc] initWithContentsOfURL:musicFile
