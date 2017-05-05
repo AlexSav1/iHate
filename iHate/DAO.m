@@ -72,13 +72,9 @@
     
     
     NSSortDescriptor *sortDescriptor;
-//    sortDescriptor = [[NSSortDescriptor alloc] initWithKey:@"score" ascending:NO];
     
     sortDescriptor = [[NSSortDescriptor alloc] initWithKey:@"score" ascending:YES];
-    
-    NSArray *sortDescriptors = [NSArray arrayWithObject:sortDescriptor];
-    NSArray *sortedArray = [self.playerScores sortedArrayUsingDescriptors:sortDescriptors];
-    
+
     NSMutableDictionary *dict = [[NSMutableDictionary alloc]init];
     
     for (PlayerScore *player in array) {
@@ -97,7 +93,6 @@
               andName: (NSString*) newName{
     
     NSSortDescriptor *sortDescriptor;
-//    sortDescriptor = [[NSSortDescriptor alloc] initWithKey:@"score" ascending:NO];
     
     sortDescriptor = [[NSSortDescriptor alloc] initWithKey:@"score" ascending:YES];
     

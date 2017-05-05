@@ -46,7 +46,7 @@
         [self.dao bgMusic];
     }
 }
-}
+
 -(void)viewWillAppear:(BOOL)animated{
     
 }
