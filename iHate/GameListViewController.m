@@ -45,9 +45,9 @@
 //    self.dao.currenBGSong = @"bgSound";
     [self.dao bgMusic];
 }
-
+}
 -(void)viewWillAppear:(BOOL)animated{
-//    self.dao.currenBGSong = @"bgSound";
+   self.dao.currentBGSong = @"bgSound";
     [self.dao bgMusic];
     
 }
