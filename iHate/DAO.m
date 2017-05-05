@@ -93,8 +93,9 @@
               andName: (NSString*) newName{
     
     NSSortDescriptor *sortDescriptor;
-    sortDescriptor = [[NSSortDescriptor alloc] initWithKey:@"score"
-                                                 ascending:YES];
+    sortDescriptor = [[NSSortDescriptor alloc] initWithKey:@"score" ascending:NO];
+    //sortDescriptor = [[NSSortDescriptor alloc] initWithKey:@"score"
+    //                                             ascending:YES];
     NSArray *sortDescriptors = [NSArray arrayWithObject:sortDescriptor];
     NSArray *sortedArray = [self.playerScores sortedArrayUsingDescriptors:sortDescriptors];
     NSMutableArray *mutSortedArray = [[NSMutableArray alloc]initWithArray:sortedArray];
@@ -124,6 +125,16 @@
         }
     }
     
+}
+
+- (void)bgMusic{
+    //_currenBGSong = @"bgSound";
+    NSURL *musicFile = [[NSBundle mainBundle] URLForResource:_currenBGSong
+                                               withExtension:@"wav"];
+    self.backgroundMusic = [[AVAudioPlayer alloc] initWithContentsOfURL:musicFile
+                                                                  error:nil];
+    self.backgroundMusic.numberOfLoops = -1;
+    [self.backgroundMusic play];
 }
 
 @end
