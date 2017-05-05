@@ -17,6 +17,20 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    self.dao = [DAO sharedDataManager];
+    
+    NSString *scores = @"";
+    
+    
+    
+    for (PlayerScore *player in self.dao.playerScores) {
+        [scores stringByAppendingString:[NSString stringWithFormat:@"%@ - %@\n", player.name, player.score]];
+    }
+    
+    NSLog(@"COOOOOOOOL: %@", scores);
+    
+    self.scoresLabel.text = scores;
+    
 }
 
 - (IBAction)replayPressed:(id)sender {

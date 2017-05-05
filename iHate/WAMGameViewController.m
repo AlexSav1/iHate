@@ -20,6 +20,11 @@
     
     self.dao = [DAO sharedDataManager];
     
+    self.gameTime = 30;
+    self.currentGameTime = 30;
+    
+    self.gameFinished = FALSE;
+    
     if(self.currentVictim != nil){
         [self.button1 setBackgroundImage:self.currentVictim forState:UIControlStateNormal];
         [self.button2 setBackgroundImage:self.currentVictim forState:UIControlStateNormal];
@@ -39,9 +44,66 @@
     self.howOftenHeadsPopUp = arc4random_uniform(5);
     
     [NSTimer scheduledTimerWithTimeInterval:self.howOftenHeadsPopUp target:self selector:@selector(activateVictim) userInfo:nil repeats:YES];
+    
+    [NSTimer scheduledTimerWithTimeInterval:1 target:self selector:@selector(updateTime) userInfo:nil repeats:YES];
+    
+    [NSTimer scheduledTimerWithTimeInterval:self.gameTime target:self selector:@selector(finishGame) userInfo:nil repeats:NO];
+}
+
+-(void) updateTime{
+    self.currentGameTime--;
+    self.timeLabel.text = [NSString stringWithFormat:@":%d Sec", self.currentGameTime];
+}
+
+-(void) finishGame {
+    
+    self.gameFinished = TRUE;
+
+    [self displayMsg:[NSString stringWithFormat:@"Score:%i", self.dao.currentScore]];
+    
+}
+
+- (void) displayMsg:(NSString *)msg
+{
+    // Initialize the controller for displaying the message
+    UIAlertController *alert = [UIAlertController alertControllerWithTitle:@" "
+                                                                   message:msg
+                                                            preferredStyle:UIAlertControllerStyleAlert];
+
+    
+    // Create an OK button
+    UIAlertAction* okButton = [UIAlertAction actionWithTitle:@"Ok" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+        
+        NSString *theName = alert.textFields[0].text;
+        self.dao.currentName = theName;
+        [self performSegueWithIdentifier:@"showResults" sender:self];
+        
+    }];
+    
+    // Add the button to the controller
+    [alert addAction:okButton];
+    
+    [alert addTextFieldWithConfigurationHandler:^(UITextField *textField) {
+        textField.placeholder = @"Enter your Name";
+        textField.keyboardType = UIKeyboardTypeDefault;
+        
+    }];
+    
+    [self presentViewController:alert animated:YES completion:nil];
+}
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+//    WAMScoreBoardViewController *scoreVC = segue.destinationViewController;
+//    gameVC.currentVictim = sender;
+    NSNumber *score = [[NSNumber alloc]initWithInt:self.dao.currentScore];
+    [self.dao patchDataBase:score  andName:self.dao.currentName];
 }
 
 -(void) activateVictim {
+    
+    if(self.gameFinished){
+        return;
+    }
     
     self.howOftenHeadsPopUp = arc4random_uniform(5);
     

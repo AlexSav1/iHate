@@ -15,6 +15,7 @@
 //@property (strong, nonatomic) NSMutableArray *topScores;
 @property NSDictionary *scoresDict;
 @property NSMutableArray *playerScores;
+@property NSString *currentName;
 @property int currentScore;
 @property (strong, nonatomic) FIRDatabaseReference *ref;
 
