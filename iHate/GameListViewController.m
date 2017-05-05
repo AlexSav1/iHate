@@ -24,12 +24,12 @@
     self.pickerView.delegate = self;
     self.pickerView.dataSource = self;
     [self.dao fetchFromDatabase];
-    self.dao.currenBGSong = @"bgSound";
+//    self.dao.currenBGSong = @"bgSound";
     [self.dao bgMusic];
 }
 
 -(void)viewWillAppear:(BOOL)animated{
-    self.dao.currenBGSong = @"bgSound";
+//    self.dao.currenBGSong = @"bgSound";
     [self.dao bgMusic];
     
 }

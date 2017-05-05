@@ -97,7 +97,7 @@
     UIAlertAction* okButton = [UIAlertAction actionWithTitle:@"Ok" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
         
         NSString *theName = alert.textFields[0].text;
-        if ([theName isEqual: @""]) {
+        if ([theName isEqual: [NSNull null]]) {
             theName = @"Player";
         } else {
             self.dao.currentName = theName;
