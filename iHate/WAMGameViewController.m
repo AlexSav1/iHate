@@ -20,6 +20,8 @@
     
     self.dao = [DAO sharedDataManager];
     
+    self.dao.currentVictim = self.currentVictim;
+
     self.gameTime = 15;
     self.currentGameTime = 15;
     self.gameFinished = FALSE;

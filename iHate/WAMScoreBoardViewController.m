@@ -36,8 +36,8 @@
 - (IBAction)replayPressed:(id)sender {
     
     WAMGameViewController *gameVC = [[WAMGameViewController alloc] init];
-    
-    WAMGameVC.currentVictim = DAO.sharedDataManager.currentVictim
+    DAO *dao = [DAO sharedDataManager];
+    gameVC.currentVictim = dao.currentVictim;
     [self dismissViewControllerAnimated:true completion:nil ];
     
     
