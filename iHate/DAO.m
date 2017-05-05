@@ -34,7 +34,6 @@
 -(void) fetchFromDatabase{
     
     
-    
     self.ref = [[FIRDatabase database] reference];
     
     [self.ref observeSingleEventOfType:FIRDataEventTypeValue withBlock:^(FIRDataSnapshot * _Nonnull snapshot) {
