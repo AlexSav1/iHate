@@ -25,6 +25,7 @@
     if (self) {
         self.games = @[@"Whack-em", @"BBQ-em", @"Slice-em"];
         self.currentScore = 0;
+        self.playerScores = [[NSMutableArray alloc]init];
     }
     return self;
 }
@@ -46,26 +47,82 @@
         
         self.scoresDict = scoresDict;
         
-        NSMutableArray *names = [[NSMutableArray alloc]init];
-        NSMutableArray *scores = [[NSMutableArray alloc]init];
-        
         [scoresDict enumerateKeysAndObjectsUsingBlock:^(id  _Nonnull key, id  _Nonnull obj, BOOL * _Nonnull stop) {
-//            NSLog(@"KEY: %@", key);
-//            NSLog(@"OBJECT: %@", obj);
-            [names addObject:key];
-            [scores addObject:obj];
+            PlayerScore *newPlayer = [[PlayerScore alloc]initWithName:key andScore:obj];
+            [self.playerScores addObject:newPlayer];
         }];
         
-         //NSLog(@"NAMES: %@", names[2]);
-        //NSLog(@"SCORES: %@", scores[2]);
-        
-        //scores = [scores sortedArrayUsingSelector: @selector(compare:)];
-        
-        //NSLog(@"SCORES: %@", scores);
         
     }withCancelBlock:^(NSError * _Nonnull error) {
         NSLog(@"%@", error.localizedDescription);
     }];
+    
+}
+
+-(void) addScore:(PlayerScore*) newScore
+         ToArray:(NSMutableArray*) array
+        AtIndex:(int) index{
+    
+    NSLog(@"INDEXXX: %d", index);
+    [array insertObject:newScore atIndex:index+1];
+    [array removeObjectAtIndex:0];
+    self.playerScores = [[NSMutableArray alloc]initWithArray:array];
+    
+    
+    NSSortDescriptor *sortDescriptor;
+    sortDescriptor = [[NSSortDescriptor alloc] initWithKey:@"score"
+                                                 ascending:YES];
+    NSArray *sortDescriptors = [NSArray arrayWithObject:sortDescriptor];
+    NSArray *sortedArray = [self.playerScores sortedArrayUsingDescriptors:sortDescriptors];
+    
+    NSMutableDictionary *dict = [[NSMutableDictionary alloc]init];
+    
+    for (PlayerScore *player in array) {
+        [dict setObject:player.score forKey:player.name];
+    }
+    
+    NSLog(@"FINAL: %@", dict);
+    
+    self.ref = [[FIRDatabase database] reference];
+    
+    [[[self.ref child:@"games"] child:@"wam"] setValue:@{@"scores": dict}];
+    
+}
+
+-(void) patchDataBase: (NSNumber*) newScore
+              andName: (NSString*) newName{
+    
+    NSSortDescriptor *sortDescriptor;
+    sortDescriptor = [[NSSortDescriptor alloc] initWithKey:@"score"
+                                                 ascending:YES];
+    NSArray *sortDescriptors = [NSArray arrayWithObject:sortDescriptor];
+    NSArray *sortedArray = [self.playerScores sortedArrayUsingDescriptors:sortDescriptors];
+    NSMutableArray *mutSortedArray = [[NSMutableArray alloc]initWithArray:sortedArray];
+    
+    
+    //NSNumber *newScore = [[NSNumber alloc]initWithInt:16];
+    //NSString *newName = @"fuckThis";
+    
+    
+    for (PlayerScore *player in mutSortedArray) {
+        NSLog(@"SCOREEEEE: %@", player.score);
+        
+        int index = [mutSortedArray indexOfObject:player];
+        
+        if(player == [mutSortedArray lastObject]){
+            PlayerScore *new = [[PlayerScore alloc]initWithName:newName andScore:newScore];
+            [self addScore:new ToArray:mutSortedArray AtIndex:index];
+            return;
+        }
+        
+        PlayerScore *nextPlayer = [sortedArray objectAtIndex:index+1];
+        
+        if(newScore >= player.score && newScore <= nextPlayer.score){
+            PlayerScore *new = [[PlayerScore alloc]initWithName:newName andScore:newScore];
+            [self addScore:new ToArray:mutSortedArray AtIndex:index];
+            return;
+        }
+    }
     
 }
 

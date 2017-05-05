@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		006B7E851EBBCDF6004BC39C /* GameListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 006B7E7E1EBBCDF6004BC39C /* GameListViewController.m */; };
 		006B7E871EBBCDF6004BC39C /* WAMGameViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 006B7E821EBBCDF6004BC39C /* WAMGameViewController.m */; };
+		AA79FBDF1EBCD2D6009D337C /* PlayerScore.m in Sources */ = {isa = PBXBuildFile; fileRef = AA79FBDE1EBCD2D6009D337C /* PlayerScore.m */; };
 		EBC94501613CA88E22475E7B /* libPods-iHate.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6141079E682E2EE2B7DE6460 /* libPods-iHate.a */; };
 		FA4DD77A1EBBC87300CB48FE /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = FA4DD7791EBBC87300CB48FE /* main.m */; };
 		FA4DD77D1EBBC87300CB48FE /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = FA4DD77C1EBBC87300CB48FE /* AppDelegate.m */; };
@@ -28,6 +29,8 @@
 		4321CA90FD9D1FDC7144BAD3 /* Pods-iHate.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iHate.release.xcconfig"; path = "Pods/Target Support Files/Pods-iHate/Pods-iHate.release.xcconfig"; sourceTree = "<group>"; };
 		6141079E682E2EE2B7DE6460 /* libPods-iHate.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-iHate.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		636053C1F7D76BFDD05434C5 /* Pods-iHate.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iHate.debug.xcconfig"; path = "Pods/Target Support Files/Pods-iHate/Pods-iHate.debug.xcconfig"; sourceTree = "<group>"; };
+		AA79FBDD1EBCD2D6009D337C /* PlayerScore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlayerScore.h; sourceTree = "<group>"; };
+		AA79FBDE1EBCD2D6009D337C /* PlayerScore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlayerScore.m; sourceTree = "<group>"; };
 		FA4DD7751EBBC87300CB48FE /* iHate.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iHate.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA4DD7791EBBC87300CB48FE /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		FA4DD77B1EBBC87300CB48FE /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -97,6 +100,8 @@
 				FA4DD77C1EBBC87300CB48FE /* AppDelegate.m */,
 				FA4DD7941EBBD25F00CB48FE /* DAO.h */,
 				FA4DD7951EBBD25F00CB48FE /* DAO.m */,
+				AA79FBDD1EBCD2D6009D337C /* PlayerScore.h */,
+				AA79FBDE1EBCD2D6009D337C /* PlayerScore.m */,
 				FA4DD7811EBBC87300CB48FE /* Main.storyboard */,
 				006B7E7D1EBBCDF6004BC39C /* GameListViewController.h */,
 				006B7E7E1EBBCDF6004BC39C /* GameListViewController.m */,
@@ -250,6 +255,7 @@
 				006B7E871EBBCDF6004BC39C /* WAMGameViewController.m in Sources */,
 				FA4DD77A1EBBC87300CB48FE /* main.m in Sources */,
 				006B7E851EBBCDF6004BC39C /* GameListViewController.m in Sources */,
+				AA79FBDF1EBCD2D6009D337C /* PlayerScore.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

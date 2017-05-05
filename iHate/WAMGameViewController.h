@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 #import <AudioToolbox/AudioToolbox.h>
 #import "DAO.h"
+#import "WAMScoreBoardViewController.h"
 
 @interface WAMGameViewController : UIViewController
 
@@ -19,11 +20,15 @@
 
 @property DAO *dao;
 
-//@property NSArray
+@property int gameTime;
+@property int currentGameTime;
 
 @property UIImage *currentVictim;
 
+@property BOOL gameFinished;
+
 @property (weak, nonatomic) IBOutlet UILabel *scoreLabel;
+@property (weak, nonatomic) IBOutlet UILabel *timeLabel;
 
 @property (weak, nonatomic) IBOutlet UIButton *button1;
 @property (weak, nonatomic) IBOutlet UIButton *button2;
