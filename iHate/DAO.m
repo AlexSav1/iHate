@@ -130,7 +130,7 @@
 - (void)bgMusic{
     //_currenBGSong = @"bgSound";
     NSURL *musicFile = [[NSBundle mainBundle] URLForResource:_currentBGSong
-                                               withExtension:@"wav"];
+                                               withExtension:@"mp3"];
     self.backgroundMusic = [[AVAudioPlayer alloc] initWithContentsOfURL:musicFile
                                                                   error:nil];
     self.backgroundMusic.numberOfLoops = -1;

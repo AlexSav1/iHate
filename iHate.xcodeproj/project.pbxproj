@@ -9,13 +9,13 @@
 /* Begin PBXBuildFile section */
 		006B7E851EBBCDF6004BC39C /* GameListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 006B7E7E1EBBCDF6004BC39C /* GameListViewController.m */; };
 		006B7E871EBBCDF6004BC39C /* WAMGameViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 006B7E821EBBCDF6004BC39C /* WAMGameViewController.m */; };
+		006B7E981EBD3839004BC39C /* bgSound.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 006B7E951EBD3839004BC39C /* bgSound.mp3 */; };
 		AA79FBDF1EBCD2D6009D337C /* PlayerScore.m in Sources */ = {isa = PBXBuildFile; fileRef = AA79FBDE1EBCD2D6009D337C /* PlayerScore.m */; };
 		EBC94501613CA88E22475E7B /* libPods-iHate.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6141079E682E2EE2B7DE6460 /* libPods-iHate.a */; };
 		F9888BB41EBD0C5F00B2E002 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F9888BB31EBD0C5F00B2E002 /* AVFoundation.framework */; };
 		F9888BB61EBD0C6500B2E002 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F9888BB51EBD0C6500B2E002 /* AudioToolbox.framework */; };
 		F9888BBD1EBD10EB00B2E002 /* bloodSplatSound.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F9888BBC1EBD10EB00B2E002 /* bloodSplatSound.mp3 */; };
 		F9888BBF1EBD10F300B2E002 /* squishSound.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F9888BBE1EBD10F300B2E002 /* squishSound.mp3 */; };
-		F9888BC11EBD10FB00B2E002 /* bgSound.wav in Resources */ = {isa = PBXBuildFile; fileRef = F9888BC01EBD10FB00B2E002 /* bgSound.wav */; };
 		F9888BC31EBD14CF00B2E002 /* boneSound.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F9888BC21EBD14CF00B2E002 /* boneSound.mp3 */; };
 		F9888BC51EBD151000B2E002 /* squishySound.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F9888BC41EBD151000B2E002 /* squishySound.mp3 */; };
 		F9888BC81EBD2F3700B2E002 /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = F9888BC71EBD2F3700B2E002 /* Reachability.m */; };
@@ -34,6 +34,7 @@
 		006B7E7E1EBBCDF6004BC39C /* GameListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameListViewController.m; sourceTree = "<group>"; };
 		006B7E811EBBCDF6004BC39C /* WAMGameViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WAMGameViewController.h; sourceTree = "<group>"; };
 		006B7E821EBBCDF6004BC39C /* WAMGameViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WAMGameViewController.m; sourceTree = "<group>"; };
+		006B7E951EBD3839004BC39C /* bgSound.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = bgSound.mp3; sourceTree = "<group>"; };
 		4321CA90FD9D1FDC7144BAD3 /* Pods-iHate.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iHate.release.xcconfig"; path = "Pods/Target Support Files/Pods-iHate/Pods-iHate.release.xcconfig"; sourceTree = "<group>"; };
 		6141079E682E2EE2B7DE6460 /* libPods-iHate.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-iHate.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		636053C1F7D76BFDD05434C5 /* Pods-iHate.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iHate.debug.xcconfig"; path = "Pods/Target Support Files/Pods-iHate/Pods-iHate.debug.xcconfig"; sourceTree = "<group>"; };
@@ -43,7 +44,6 @@
 		F9888BB51EBD0C6500B2E002 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		F9888BBC1EBD10EB00B2E002 /* bloodSplatSound.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = bloodSplatSound.mp3; sourceTree = "<group>"; };
 		F9888BBE1EBD10F300B2E002 /* squishSound.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = squishSound.mp3; sourceTree = "<group>"; };
-		F9888BC01EBD10FB00B2E002 /* bgSound.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = bgSound.wav; sourceTree = "<group>"; };
 		F9888BC21EBD14CF00B2E002 /* boneSound.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = boneSound.mp3; sourceTree = "<group>"; };
 		F9888BC41EBD151000B2E002 /* squishySound.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = squishySound.mp3; sourceTree = "<group>"; };
 		F9888BC61EBD2F3700B2E002 /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Reachability.h; sourceTree = "<group>"; };
@@ -146,9 +146,9 @@
 			children = (
 				F9888BBC1EBD10EB00B2E002 /* bloodSplatSound.mp3 */,
 				F9888BBE1EBD10F300B2E002 /* squishSound.mp3 */,
-				F9888BC01EBD10FB00B2E002 /* bgSound.wav */,
 				F9888BC21EBD14CF00B2E002 /* boneSound.mp3 */,
 				F9888BC41EBD151000B2E002 /* squishySound.mp3 */,
+				006B7E951EBD3839004BC39C /* bgSound.mp3 */,
 				FA4DD7791EBBC87300CB48FE /* main.m */,
 			);
 			name = "Supporting Files";
@@ -215,8 +215,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				006B7E981EBD3839004BC39C /* bgSound.mp3 in Resources */,
 				F9888BC31EBD14CF00B2E002 /* boneSound.mp3 in Resources */,
-				F9888BC11EBD10FB00B2E002 /* bgSound.wav in Resources */,
 				FA4DD7881EBBC87300CB48FE /* LaunchScreen.storyboard in Resources */,
 				F9888BC51EBD151000B2E002 /* squishySound.mp3 in Resources */,
 				F9888BBD1EBD10EB00B2E002 /* bloodSplatSound.mp3 in Resources */,

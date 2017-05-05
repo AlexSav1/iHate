@@ -20,21 +20,15 @@
     
     
     self.dao = [DAO sharedDataManager];
-    self.dao.currentBGSong = @"bgSound";
-    [self.dao bgMusic];
     self.dao.currentVictim = self.currentVictim;
 
-//    self.gameTime = 30;
-//    self.currentGameTime = 30;
-//    self.gameFinished = FALSE;
-//    self.timeLabel.text = [NSString stringWithFormat:@":%d Secs", self.currentGameTime];
 }
 
 - (void) viewWillAppear:(BOOL)animated   {
 
     
-    self.gameTime = 30;
-    self.currentGameTime = 30;
+    self.gameTime = 20;
+    self.currentGameTime = 20;
     self.gameFinished = FALSE;
     self.timeLabel.text = [NSString stringWithFormat:@":%d Secs", self.currentGameTime];
     self.scoreLabel.text = @"0";

@@ -16,8 +16,6 @@
 @property int howOftenHeadsPopUp;
 @property (weak, nonatomic) IBOutlet UIImageView *bloodSplats;
 
-//@property int numberOfHeadsPoppingUp;
-
 @property DAO *dao;
 
 @property int gameTime;

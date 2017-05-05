@@ -428,6 +428,7 @@
                                 </state>
                                 <connections>
                                     <action selector="pickAnotherGamePressed:" destination="fw8-Bn-h6x" eventType="touchUpInside" id="8Lb-BF-RpN"/>
+                                    <segue destination="BYZ-38-t0r" kind="show" id="5Mf-qm-sZi"/>
                                 </connections>
                             </button>
                         </subviews>

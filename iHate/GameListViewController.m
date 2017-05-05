@@ -41,14 +41,13 @@
     }
     else{
 
-    [self.dao fetchFromDatabase];
-//    self.dao.currenBGSong = @"bgSound";
-    [self.dao bgMusic];
+        [self.dao fetchFromDatabase];
+        self.dao.currentBGSong = @"bgSound";
+        [self.dao bgMusic];
+    }
 }
 
 -(void)viewWillAppear:(BOOL)animated{
-//    self.dao.currenBGSong = @"bgSound";
-    [self.dao bgMusic];
     
 }
 
