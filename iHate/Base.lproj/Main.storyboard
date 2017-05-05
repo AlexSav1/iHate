@@ -143,10 +143,10 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="zp5-ci-5YM">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bloodSplat-1" translatesAutoresizingMaskIntoConstraints="NO" id="m9M-Ps-w9n" userLabel="bkg">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="iHate-WAK-bkg" translatesAutoresizingMaskIntoConstraints="NO" id="m9M-Ps-w9n">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="iHate-WAK-bkg" translatesAutoresizingMaskIntoConstraints="NO" id="zp5-ci-5YM">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                             </imageView>
                             <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dgs-Kt-YSb">
@@ -462,6 +462,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="bloodSplat-1" width="377" height="675"/>
         <image name="iHate-WAK-bkg" width="377" height="675"/>
         <image name="iHate-bkg2" width="377" height="675"/>
         <image name="trump" width="427" height="547"/>
