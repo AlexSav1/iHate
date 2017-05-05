@@ -24,7 +24,7 @@
     
     
     for (PlayerScore *player in self.dao.playerScores) {
-        [scores stringByAppendingString:[NSString stringWithFormat:@"%@ - %@\n", player.name, player.score]];
+        scores = [scores stringByAppendingString:[NSString stringWithFormat:@"%@ = %@\n", player.name, player.score]];
     }
     
     NSLog(@"COOOOOOOOL: %@", scores);

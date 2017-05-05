@@ -140,10 +140,15 @@
     NSString *path;
     int whichSound = arc4random_uniform(3);
     
-    if (whichSound == 0) {
-        path = [[NSBundle mainBundle] pathForResource : @"YouBetterBelieve" ofType :@"mp3"];
-    } else {
-        path = [[NSBundle mainBundle] pathForResource : @"Wrong" ofType :@"mp3"];
+    switch (whichSound) {
+        case 0:
+            path = [[NSBundle mainBundle] pathForResource : @"sound1" ofType :@"mp3"];
+            break;
+        case 1:
+            path = [[NSBundle mainBundle] pathForResource : @"sound2" ofType :@"mp3"];
+            break;
+        default:
+            break;
     }
     
     if ([[NSFileManager defaultManager] fileExistsAtPath : path]) {
@@ -222,6 +227,7 @@
     //[self playHitSound];
     self.dao.currentScore++;
     self.scoreLabel.text = [NSString stringWithFormat: @"Score:%i", self.dao.currentScore];
+    //[self playHitSound];
 }
 - (IBAction)button2Pressed:(id)sender {
     self.button2.hidden = YES;

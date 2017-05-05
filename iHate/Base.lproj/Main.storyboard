@@ -281,7 +281,7 @@
                                     <action selector="button12Pressed:" destination="de9-hR-VWq" eventType="touchUpInside" id="kdb-7A-BUD"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SCORE: 150" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ow7-Oc-5I4">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SCORE: 0" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ow7-Oc-5I4">
                                 <rect key="frame" x="222" y="168" width="137" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="21" id="ChT-sl-8nM"/>
